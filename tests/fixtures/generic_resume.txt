@@ -1,0 +1,20 @@
+Jordan Taylor
+jordan.taylor@example.com | (555) 123-9876 | Chicago, IL
+
+SUMMARY
+Hardworking software enthusiast looking for new opportunities. Quick learner with experience in programming and working on various projects.
+
+SKILLS
+- Programming: Python, C++, HTML, CSS, JavaScript
+- Office Tools: Microsoft Word, Excel, PowerPoint
+- General: Problem solving, Communication, Team player
+
+EXPERIENCE
+Software Intern | TechCo | Chicago, IL | 2023 – 2024
+- Assisted developers with bug fixes and testing.
+- Participated in daily standups and sprint planning meetings.
+- Updated internal wiki documentation.
+
+EDUCATION
+Bachelor of Arts in Information Technology
+Illinois State University | 2023

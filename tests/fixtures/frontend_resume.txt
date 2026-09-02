@@ -1,0 +1,34 @@
+Samantha Chen
+samantha.chen@example.com | (555) 345-6789 | Seattle, WA | linkedin.com/in/samanthachen | github.com/schen-frontend
+
+PROFESSIONAL SUMMARY
+Frontend Engineer with 4 years of experience building high-performance web applications using React, TypeScript, Next.js, and Tailwind CSS. Specialized in state management, responsive UI design systems, web accessibility (WCAG AA), and frontend performance optimization.
+
+TECHNICAL SKILLS
+- Languages: TypeScript, JavaScript (ES6+), HTML5, CSS3, GraphQL
+- Frontend Frameworks: React 18, Next.js, Vue.js
+- State Management: Redux Toolkit, Zustand, React Query (TanStack Query)
+- Styling: Tailwind CSS, CSS Modules, Styled Components, Framer Motion
+- Build & Testing: Vite, Webpack, Jest, React Testing Library, Playwright, Cypress
+- Tooling: Git, Storybook, Figma, Docker
+
+PROFESSIONAL EXPERIENCE
+
+Frontend Engineer | WebVanguard | Seattle, WA | 2022 – Present
+- Rebuilt core customer dashboard using Next.js 14 and TypeScript, reducing initial page load time by 45% and achieving a 98 Google Lighthouse score.
+- Developed a comprehensive accessible UI component library in Storybook adhering to WCAG 2.1 AA standards, adopted across 5 product teams.
+- Optimized bundle size by 30% through dynamic code splitting, tree shaking, and lazy-loading assets.
+- Implemented state management using Zustand and TanStack Query with optimistic UI updates.
+
+Junior Frontend Developer | Pixels & Code | Portland, OR | 2020 – 2022
+- Developed interactive web interfaces using React, Redux, and Tailwind CSS for e-commerce clients.
+- Collaborated with UI/UX designers to translate Figma mockups into pixel-perfect responsive layouts.
+- Wrote unit and integration tests using Jest and React Testing Library, increasing test coverage from 40% to 85%.
+
+EDUCATION
+Bachelor of Science in Software Engineering
+University of Washington | Graduated: June 2020
+
+PROJECTS
+Design System Token Studio (React, TypeScript, Tailwind)
+- Created an open-source design token management tool enabling designers and developers to synchronize design tokens.

@@ -1,0 +1,40 @@
+Alex Morgan
+alex.morgan.dev@example.com | (555) 234-5678 | San Francisco, CA | linkedin.com/in/alexmorgan-dev | github.com/alexmorgan-dev
+
+PROFESSIONAL SUMMARY
+Senior Backend Engineer with 5+ years of experience designing and scaling distributed microservices, RESTful APIs, and event-driven architectures. Expert in Java, Spring Boot, Go, PostgreSQL, Kafka, and AWS. Proven track record of improving system throughput by 40% and reducing p99 latency.
+
+TECHNICAL SKILLS
+- Languages: Java (17/21), Go, Python, SQL
+- Frameworks: Spring Boot, Spring Cloud, Hibernate, FastAPI, gRPC
+- Databases: PostgreSQL, MongoDB, Redis, Elasticsearch
+- Messaging & Streaming: Apache Kafka, RabbitMQ, AWS SQS
+- Cloud & DevOps: AWS (ECS, EKS, Lambda, S3, RDS), Docker, Kubernetes, Terraform, GitHub Actions
+- Architecture: Microservices, Event-Driven Architecture, Domain-Driven Design (DDD), Distributed Systems
+
+PROFESSIONAL EXPERIENCE
+
+Senior Backend Engineer | CloudScale Tech | San Francisco, CA | 2022 – Present
+- Architected and deployed high-throughput event-driven microservices using Spring Boot and Apache Kafka handling over 25,000 events/sec.
+- Optimized PostgreSQL query execution plans and implemented Redis caching, reducing API response times by 35% and database load by 50%.
+- Led database migration from legacy monolithic MySQL to partitioned PostgreSQL database with zero downtime for 2M+ active users.
+- Designed gRPC service communication interfaces, reducing inter-service payload serialization overhead by 45%.
+- Mentored a team of 4 junior engineers on clean architecture, unit testing with JUnit/Mockito, and CI/CD best practices.
+
+Backend Software Engineer | DataPulse Inc. | Austin, TX | 2020 – 2022
+- Developed scalable REST APIs using Java and Spring Boot for financial transaction ingestion and reconciliation.
+- Implemented asynchronous batch processing pipelines using Spring Batch and AWS SQS, processing 5M+ daily records.
+- Containerized applications using Docker and configured Kubernetes Helm charts for automated deployment to AWS EKS.
+- Integrated OpenTelemetry and Prometheus for distributed tracing and observability, reducing MTTR by 30%.
+
+EDUCATION
+Bachelor of Science in Computer Science
+University of Texas at Austin | Graduated: May 2020 | GPA: 3.8/4.0
+
+PROJECTS
+Distributed Task Scheduler (Go, Redis, gRPC)
+- Built a fault-tolerant distributed task scheduling engine with leader election via Raft consensus and worker heartbeat monitoring.
+- Scaled to handle 100k concurrent scheduled cron jobs with sub-second execution triggers.
+
+Real-Time Analytics Pipeline (Java, Kafka, Apache Flink, Elasticsearch)
+- Built real-time stream processing system to aggregate clickstream telemetry and generate live dashboard metrics.

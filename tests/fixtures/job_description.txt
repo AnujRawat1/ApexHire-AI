@@ -1,0 +1,26 @@
+Senior Backend Engineer - Distributed Systems
+Location: Remote (US)
+Company: Apex Technologies
+
+About the Role:
+We are seeking a Senior Backend Engineer to join our Core Platform team. In this role, you will design, implement, and operate highly scalable microservices that process millions of transactions per day.
+
+Key Responsibilities:
+- Design, build, and maintain high-performance, fault-tolerant REST and gRPC microservices.
+- Architect real-time event-driven data streaming pipelines using Apache Kafka.
+- Optimize database schemas, query performance, and distributed caching in PostgreSQL and Redis.
+- Collaborate with infrastructure teams to deploy services on AWS using Docker and Kubernetes.
+- Drive engineering excellence through code reviews, automated testing, and observability best practices.
+
+Requirements:
+- 4+ years of professional backend software development experience.
+- Strong proficiency in Java (Spring Boot) or Go.
+- Deep hands-on experience with relational databases (PostgreSQL/MySQL) and caching systems (Redis).
+- Proven experience building distributed event-driven systems using Apache Kafka or RabbitMQ.
+- Solid experience with cloud infrastructure (AWS) and container orchestration (Kubernetes, Docker).
+- Strong understanding of RESTful API design, microservice architectures, and observability (Prometheus/Grafana).
+
+Nice to Have:
+- Experience with Spring Cloud, gRPC, or GraphQL.
+- Familiarity with CI/CD automation using GitHub Actions.
+- Prior experience with financial technology or high-throughput payment systems.
