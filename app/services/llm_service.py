@@ -56,12 +56,17 @@ class LLMService:
                     f"Attempting fallback to provider '{fallback_provider}'."
                 )
                 try:
+                    fallback_model = (
+                        self.settings.ai_fallback_model
+                        if fallback_provider == self.settings.ai_fallback_provider
+                        else (self.settings.gemini_model if fallback_provider == "gemini" else self.settings.groq_model)
+                    )
                     return await self._execute_with_retry(
                         schema=schema,
                         prompt=prompt,
                         system_instruction=system_instruction,
                         provider=fallback_provider,
-                        model=self.settings.ai_fallback_model if fallback_provider == self.settings.ai_fallback_provider else None,
+                        model=fallback_model,
                     )
                 except Exception as fallback_exc:
                     logger.error(f"Fallback provider '{fallback_provider}' also failed: {str(fallback_exc)}")
@@ -136,10 +141,11 @@ class LLMService:
             messages.append(SystemMessage(content=system_instruction))
         messages.append(HumanMessage(content=prompt))
 
+        call_timeout = min(30.0, float(self.settings.ai_request_timeout))
         try:
             response = await asyncio.wait_for(
                 structured_llm.ainvoke(messages),
-                timeout=float(self.settings.ai_request_timeout),
+                timeout=call_timeout,
             )
 
             if response is None:
@@ -154,7 +160,7 @@ class LLMService:
 
         except asyncio.TimeoutError:
             raise AIProviderTimeoutException(
-                f"Analysis timed out after {self.settings.ai_request_timeout}s.",
+                f"Analysis timed out after {call_timeout}s.",
                 provider=provider,
             )
         except Exception as e:

@@ -1,0 +1,9 @@
+curl -X POST "http://localhost:8000/api/resume/analyze" \
+  -H "Authorization: Bearer apexhire-ai-service-secret-key-2026" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "resume_text": "Alex Morgan\nSenior Backend Engineer with 5+ years of experience designing and scaling distributed microservices, RESTful APIs, and event-driven architectures. Expert in Java, Spring Boot, Go, PostgreSQL, Kafka, and AWS. Proven track record of improving system throughput by 40% and reducing p99 latency.",
+    "target_role": "Backend Engineer",
+    "experience_level": "Senior (5+ years)",
+    "job_description": "We are seeking a Senior Backend Engineer proficient in Java, Spring Boot, distributed microservices, and Apache Kafka."
+  }'

@@ -54,7 +54,7 @@ class Settings(BaseSettings):
         validation_alias=AliasChoices("GEMINI_API_KEY", "gemini_api_key"),
     )
     gemini_model: str = Field(
-        default="gemini-flash-latest",
+        default="gemini-3.5-flash-lite",
         validation_alias=AliasChoices("GEMINI_MODEL", "gemini_model"),
     )
 
@@ -64,23 +64,23 @@ class Settings(BaseSettings):
         validation_alias=AliasChoices("GROQ_API_KEY", "groq_api_key"),
     )
     groq_model: str = Field(
-        default="qwen/qwen3.8-27b",
+        default="openai/gpt-oss-120b",
         validation_alias=AliasChoices("GROQ_MODEL", "groq_model"),
     )
 
     # Service-to-Service Security Key
     ai_service_api_key: str = Field(
-        default="dev-api-key",
+        default="apexhire-ai-service-secret-key-2026",
         validation_alias=AliasChoices("AI_SERVICE_API_KEY", "PYTHON_SERVICE_API_KEY", "ai_service_api_key"),
     )
 
     # Resilience & Fallback
     ai_request_timeout: int = Field(
-        default=120,
+        default=60,
         validation_alias=AliasChoices("AI_REQUEST_TIMEOUT", "ai_request_timeout"),
     )
     ai_max_retries: int = Field(
-        default=2,
+        default=1,
         validation_alias=AliasChoices("AI_MAX_RETRIES", "ai_max_retries"),
     )
     enable_provider_fallback: bool = Field(
@@ -88,11 +88,11 @@ class Settings(BaseSettings):
         validation_alias=AliasChoices("ENABLE_PROVIDER_FALLBACK", "enable_provider_fallback"),
     )
     ai_fallback_provider: Optional[str] = Field(
-        default="groq",
+        default="gemini",
         validation_alias=AliasChoices("AI_FALLBACK_PROVIDER", "ai_fallback_provider"),
     )
     ai_fallback_model: Optional[str] = Field(
-        default="llama-3.3-70b-versatile",
+        default="gemini-3.5-flash-lite",
         validation_alias=AliasChoices("AI_FALLBACK_MODEL", "ai_fallback_model"),
     )
 
