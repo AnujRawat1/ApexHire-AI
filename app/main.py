@@ -12,6 +12,7 @@ from app.utils.logging import setup_logging, request_id_ctx
 from app.api.routes.health import health_router
 from app.api.routes.resume import resume_router
 from app.api.routes.cover_letter import cover_letter_router
+from app.api.routes.career_mentor import career_mentor_router
 
 logger = logging.getLogger(__name__)
 
@@ -91,6 +92,7 @@ def create_app() -> FastAPI:
     app.include_router(health_router)
     app.include_router(resume_router)
     app.include_router(cover_letter_router)
+    app.include_router(career_mentor_router)
 
     return app
 
