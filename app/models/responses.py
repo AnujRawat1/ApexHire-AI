@@ -67,3 +67,21 @@ class ErrorResponse(BaseModel):
 
 class HealthResponse(BaseModel):
     status: str = Field(default="healthy", description="Service health status indicator")
+
+
+class CoverLetterGenerateResponse(BaseModel):
+    model_config = ConfigDict(
+        populate_by_name=True,
+        alias_generator=to_camel,
+        serialize_by_alias=True,
+    )
+
+    content: str = Field(..., description="The complete, formatted cover letter")
+    key_highlights: List[str] = Field(
+        default_factory=list,
+        description="Key qualifications, metrics, or points highlighted in the letter"
+    )
+    target_role: str = Field(..., description="Target job title or role")
+    company_name: str = Field(..., description="Target company name")
+    tone: str = Field(..., description="Tone used in generation")
+

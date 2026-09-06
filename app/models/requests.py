@@ -63,3 +63,68 @@ class ResumeAnalysisRequest(BaseModel):
             stripped = v.strip()
             return stripped if len(stripped) > 0 else None
         return None
+
+
+class CoverLetterGenerateRequest(BaseModel):
+    model_config = ConfigDict(
+        populate_by_name=True,
+        str_strip_whitespace=True,
+    )
+
+    candidate_name: Optional[str] = Field(
+        default=None,
+        max_length=120,
+        description="Candidate's full name",
+        validation_alias=AliasChoices("candidate_name", "candidateName"),
+    )
+    candidate_email: Optional[str] = Field(
+        default=None,
+        max_length=120,
+        description="Candidate's email address",
+        validation_alias=AliasChoices("candidate_email", "candidateEmail"),
+    )
+    target_role: str = Field(
+        ...,
+        min_length=2,
+        max_length=100,
+        description="Target job title or role (e.g. Senior Backend Engineer)",
+        validation_alias=AliasChoices("target_role", "targetRole"),
+    )
+    company_name: str = Field(
+        ...,
+        min_length=1,
+        max_length=100,
+        description="Name of the company being applied to (e.g. Stripe)",
+        validation_alias=AliasChoices("company_name", "companyName"),
+    )
+    job_description: Optional[str] = Field(
+        default=None,
+        max_length=30000,
+        description="Job description or posting requirements",
+        validation_alias=AliasChoices("job_description", "jobDescription"),
+    )
+    resume_text: Optional[str] = Field(
+        default=None,
+        max_length=50000,
+        description="Extracted plain text from the candidate's resume",
+        validation_alias=AliasChoices("resume_text", "resumeText"),
+    )
+    skills: Optional[str] = Field(
+        default=None,
+        max_length=1000,
+        description="Specific skills or technologies to emphasize",
+        validation_alias=AliasChoices("skills", "skillsToEmphasize"),
+    )
+    additional_info: Optional[str] = Field(
+        default=None,
+        max_length=5000,
+        description="Optional personal notes, achievements, or context",
+        validation_alias=AliasChoices("additional_info", "additionalInfo"),
+    )
+    tone: str = Field(
+        default="Professional",
+        max_length=40,
+        description="Writing tone: Professional, Confident, Friendly, Concise, or Enthusiastic",
+        validation_alias=AliasChoices("tone", "writingTone"),
+    )
+

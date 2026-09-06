@@ -11,6 +11,7 @@ from app.exceptions.handlers import register_exception_handlers
 from app.utils.logging import setup_logging, request_id_ctx
 from app.api.routes.health import health_router
 from app.api.routes.resume import resume_router
+from app.api.routes.cover_letter import cover_letter_router
 
 logger = logging.getLogger(__name__)
 
@@ -89,6 +90,7 @@ def create_app() -> FastAPI:
     # Register API Routers
     app.include_router(health_router)
     app.include_router(resume_router)
+    app.include_router(cover_letter_router)
 
     return app
 
